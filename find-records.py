@@ -8,7 +8,9 @@ mycollection = mydb["products"]
 
 # result = mycollection.find_one()  # tekil kayıt sorgulama
 
-for i in mycollection.find():
+
+# collection daki tüm kayıtları getirir, query parametresi 0 olanı getirmez, 1 olanı getirir.
+for i in mycollection.find({}, {"_id": 0, "name": 1, "price": 1}):
     print(i)
 
 
