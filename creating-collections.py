@@ -6,16 +6,17 @@ mydb = myclient["demo"]
 mycollection = mydb["products"]
 
 
-product = {
-    "name": "Iphone 15",
-    "price": "60000",
-    "description": "Color Black"
-}
+# product = {
+#     "name": "Iphone 15",
+#     "price": "60000",
+#     "description": "Color Black"
+# }
 
-result = mycollection.insert_one(product)
+# result = mycollection.insert_one(product)
 
-print(result)
-print(type(result))
+# print(result)
+# print(type(result))
+# print(result.inserted_id) # collection id gösterir.
 
 
 # db'deki collectionları  listeler
