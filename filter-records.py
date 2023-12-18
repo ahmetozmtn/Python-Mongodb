@@ -31,6 +31,11 @@ result = mycollection.find({
     }
 })
 
+result = mycollection.find({
+    "price": {
+        "$eq": "30000"  # fiyatı 30000'e eşit olan kayıtları getirir.
+    }
+})
 
 for i in result:
     print(i)
