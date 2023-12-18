@@ -19,5 +19,12 @@ result = mycollection.find({
     }
 })
 
+result = mycollection.find({
+    "price": {
+        "$gt": "30000"  # fiyatı 30000 den büyük olan kayıtları getirir.
+    }
+})
+
+
 for i in result:
     print(i)
