@@ -19,6 +19,10 @@ result = mycollection.find({
     }
 })
 
+
+# source : https://www.mongodb.com/docs/manual/reference/operator/query/
+
+
 result = mycollection.find({
     "price": {
         "$gt": "30000"  # fiyatı 30000 den büyük olan kayıtları getirir.
@@ -36,6 +40,12 @@ result = mycollection.find({
         "$eq": "30000"  # fiyatı 30000'e eşit olan kayıtları getirir.
     }
 })
+
+result = mycollection.find({
+    "name": {"$regex": "^I"}  # name "I" ile başlayan tüm kayıtları getirir
+
+})
+
 
 for i in result:
     print(i)
