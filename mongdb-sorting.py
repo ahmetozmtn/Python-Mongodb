@@ -16,5 +16,10 @@ result = mycollection.find().sort("name", -1)
 result = mycollection.find().sort("price")  # artan fiyata göre sıralar
 result = mycollection.find().sort("price", -1)  # azalan fiyata göre sıralar
 
+
+# name ve fiyata göre sıralama yapar.
+result = mycollection.find().sort([("name", 1), ("price", -1)])
+
+
 for i in result:
     print(i)
