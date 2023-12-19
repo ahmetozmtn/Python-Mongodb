@@ -12,6 +12,7 @@ for i in mycollection.find():
     print(i)
 
 
+# tekil kayıt güncelleme
 mycollection.update_one(
     {"name": "Iphone 17"},
     {"$set": {
@@ -20,5 +21,13 @@ mycollection.update_one(
     }}
 )
 
-for i in mycollection.find():
-    print(i)
+query = {"name": "Iphone 11"}
+new_value = {"$set": {
+    "name": "Samsung S22",
+    "price": "40000"
+}}
+
+
+# çoklu kayıt güncelleme
+result = mycollection.update_many(query, new_value)
+print(f"{result.modified_count} adet kayıt güncellendi!")
